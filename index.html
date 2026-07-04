@@ -7,7 +7,6 @@
     <!-- Google Fonts: Cormorant Garamond / Noto Serif KR -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- 구글 폰트 링크 오류 수정 및 영문 폰트 가중치 재설정 -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400;500&family=Noto+Serif+KR:wght@200;300;400&display=swap" rel="stylesheet">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,7 +18,6 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        // 영문 폰트를 무조건 최우선으로 배치하여 한글 폰트의 영문 글리프에 잡아먹히지 않도록 수정
                         serif: ['Cormorant Garamond', 'Noto Serif KR', 'serif'],
                         sans: ['Inter', 'sans-serif'],
                     },
@@ -36,7 +34,6 @@
             font-family: 'Inter', sans-serif;
             transition: background-color 0.5s ease, color 0.5s ease;
         }
-        /* 메인 로고와 동일한 폰트 클래스 - 영문 폰트 우선순위 수정 */
         .serif-font {
             font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
         }
@@ -84,7 +81,6 @@
         <!-- SECTION: MAIN -->
         <section id="section-main" class="transition-all duration-500 opacity-100 py-12">
             <div class="max-w-6xl mx-auto flex justify-center items-center">
-                <!-- 메인 사진 해상도 CDN 적용 및 크기 80%로 축소, lazy 제거 -->
                 <img src="https://wsrv.nl/?url=https://i.ibb.co/cXDCNkxz/1000019864.jpg&w=1200&output=webp&q=80" alt="Main Artwork" class="w-[80%] h-auto object-contain block">
             </div>
         </section>
@@ -96,12 +92,12 @@
                 <!-- Work 1 -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center pb-10 border-b border-zinc-200 dark:border-zinc-800/60 last:border-0 last:pb-0">
                     <div class="md:col-span-7 cursor-pointer" onclick="openLightbox('https://i.ibb.co/99W51WWt/mandontcry.jpg', '남자는 울지 않는다..')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/99W51WWt/mandontcry.jpg&w=800&output=webp&q=80" alt="남자는 울지 않는다.." class="w-full h-auto object-contain block opacity-100">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/99W51WWt/mandontcry.jpg&w=800&output=webp&q=80" alt="남자는 울지 않는다.." class="w-full h-auto object-contain block opacity-100" loading="lazy">
                     </div>
                     <div class="md:col-span-5 space-y-4">
                         <h2 class="serif-font text-2xl md:text-3xl font-light tracking-wide text-zinc-900 dark:text-zinc-100">남자는 울지 않는다..</h2>
                         <div class="h-[1px] w-12 bg-zinc-300 dark:bg-zinc-700 my-2"></div>
-                        <p class="text-zinc-900 dark:text-white text-sm md:text-base tracking-widest uppercase font-light">DIRECTOR</p>
+                        <p class="text-zinc-900 dark:text-white text-sm md:text-base tracking-widest uppercase font-light">DIRECTOR, WRITER, EDITOR</p>
                         <div class="pt-2 text-[11px] tracking-widest font-light text-zinc-400 flex gap-4">
                             <span class="uppercase">COMEDY, NOIR</span><span>/</span><span class="lowercase">3m</span><span>/</span><span>2014</span>
                         </div>
@@ -111,12 +107,12 @@
                 <!-- Work 2 -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center pb-10 border-b border-zinc-200 dark:border-zinc-800/60 last:border-0 last:pb-0">
                     <div class="md:col-span-7 cursor-pointer" onclick="openLightbox('https://i.ibb.co/5h2W5cpn/Timeline-1-01-06-05-00.jpg', '과거에게')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/5h2W5cpn/Timeline-1-01-06-05-00.jpg&w=800&output=webp&q=80" alt="과거에게" class="w-full h-auto object-contain block opacity-100">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/5h2W5cpn/Timeline-1-01-06-05-00.jpg&w=800&output=webp&q=80" alt="과거에게" class="w-full h-auto object-contain block opacity-100" loading="lazy">
                     </div>
                     <div class="md:col-span-5 space-y-4">
                         <h2 class="serif-font text-2xl md:text-3xl font-light tracking-wide text-zinc-900 dark:text-zinc-100">과거에게</h2>
                         <div class="h-[1px] w-12 bg-zinc-300 dark:bg-zinc-700 my-2"></div>
-                        <p class="text-zinc-900 dark:text-white text-sm md:text-base tracking-widest uppercase font-light">DIRECTOR</p>
+                        <p class="text-zinc-900 dark:text-white text-sm md:text-base tracking-widest uppercase font-light">DIRECTOR, WRITER, EDITOR</p>
                         <div class="pt-2 text-[11px] tracking-widest font-light text-zinc-400 flex gap-4 flex-wrap">
                             <span class="uppercase">DRAMA</span><span>/</span><span class="lowercase">10m</span><span>/</span><span>2018</span>
                         </div>
@@ -126,7 +122,7 @@
                 <!-- Work 3 -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center pb-10 border-b border-zinc-200 dark:border-zinc-800/60 last:border-0 last:pb-0">
                     <div class="md:col-span-7 cursor-pointer" onclick="openLightbox('https://i.ibb.co/xtzVJ6RZ/1.jpg', '은퇴')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/xtzVJ6RZ/1.jpg&w=800&output=webp&q=80" alt="은퇴" class="w-full h-auto object-contain block opacity-100">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/xtzVJ6RZ/1.jpg&w=800&output=webp&q=80" alt="은퇴" class="w-full h-auto object-contain block opacity-100" loading="lazy">
                     </div>
                     <div class="md:col-span-5 space-y-4">
                         <h2 class="serif-font text-2xl md:text-3xl font-light tracking-wide text-zinc-900 dark:text-zinc-100">은퇴</h2>
@@ -141,7 +137,7 @@
                 <!-- Work 4 -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center pb-10 border-b border-zinc-200 dark:border-zinc-800/60 last:border-0 last:pb-0">
                     <div class="md:col-span-7 cursor-pointer" onclick="openLightbox('https://i.ibb.co/rfbVxFJ2/94g0n-OObu14g-OC4v-KAd3-A.jpg', '스테이세이프')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/rfbVxFJ2/94g0n-OObu14g-OC4v-KAd3-A.jpg&w=800&output=webp&q=80" alt="스테이세이프" class="w-full h-auto object-contain block opacity-100">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/rfbVxFJ2/94g0n-OObu14g-OC4v-KAd3-A.jpg&w=800&output=webp&q=80" alt="스테이세이프" class="w-full h-auto object-contain block opacity-100" loading="lazy">
                     </div>
                     <div class="md:col-span-5 space-y-4">
                         <h2 class="serif-font text-2xl md:text-3xl font-light tracking-wide text-zinc-900 dark:text-zinc-100">스테이세이프</h2>
@@ -162,7 +158,7 @@
             <!-- Category Selector (2x2 Grid) -->
             <div id="photography-categories" class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 max-w-5xl mx-auto py-8">
                 
-                <!-- MOROCCO (좌상단) -->
+                <!-- MOROCCO -->
                 <div class="flex flex-col items-center">
                     <img src="https://wsrv.nl/?url=https://i.ibb.co/k6SnHvZm/1000019870.jpg&w=800&output=webp&q=80" alt="'MOROCCO'" class="w-full h-auto object-contain block cursor-pointer" onclick="showCategory('morocco')">
                     <div class="mt-4">
@@ -170,7 +166,7 @@
                     </div>
                 </div>
 
-                <!-- KOREA (우상단) -->
+                <!-- KOREA -->
                 <div class="flex flex-col items-center">
                     <img src="https://wsrv.nl/?url=https://i.ibb.co/23TWqwKb/1000020014.jpg&w=800&output=webp&q=80" alt="'KOREA'" class="w-full h-auto object-contain block cursor-pointer" onclick="showCategory('korea')">
                     <div class="mt-4">
@@ -178,7 +174,7 @@
                     </div>
                 </div>
 
-                <!-- TEXTURE (좌하단) -->
+                <!-- TEXTURE -->
                 <div class="flex flex-col items-center">
                     <img src="https://wsrv.nl/?url=https://i.ibb.co/21XdmYqk/1000019899.jpg&w=800&output=webp&q=80" alt="'TEXTURE'" class="w-full h-auto object-contain block cursor-pointer" onclick="showCategory('texture')">
                     <div class="mt-4">
@@ -186,7 +182,7 @@
                     </div>
                 </div>
 
-                <!-- BEINGS (우하단) -->
+                <!-- BEINGS -->
                 <div class="flex flex-col items-center">
                     <img src="https://wsrv.nl/?url=https://i.ibb.co/6cChzv2k/1000019933.jpg&w=800&output=webp&q=80" alt="'BEINGS'" class="w-full h-auto object-contain block cursor-pointer" onclick="showCategory('beings')">
                     <div class="mt-4">
@@ -201,7 +197,6 @@
                     <button onclick="closeCategory()" class="flex items-center gap-2 text-[10px] tracking-[0.25em] font-light text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors uppercase">
                         <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> BACK
                     </button>
-                    <!-- 우상단 타이틀: 로고와 완벽히 동일한 폰트, 작은 크기 -->
                     <span class="serif-font text-xl md:text-2xl tracking-[0.2em] font-light text-zinc-900 dark:text-zinc-100 uppercase pointer-events-none">'TEXTURE'</span>
                 </div>
 
@@ -209,20 +204,20 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch max-w-7xl mx-auto">
                     <!-- Column 1 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/21XdmYqk/1000019899.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #01" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/21XdmYqk/1000019899.jpg', '\'TEXTURE\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/m5tKZzWk/1000019941.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #04" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/m5tKZzWk/1000019941.jpg', '\'TEXTURE\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/5gbkQbBj/1000020009.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #07" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/5gbkQbBj/1000020009.jpg', '\'TEXTURE\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/21XdmYqk/1000019899.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #01" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/21XdmYqk/1000019899.jpg', '\'TEXTURE\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/m5tKZzWk/1000019941.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #04" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/m5tKZzWk/1000019941.jpg', '\'TEXTURE\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/5gbkQbBj/1000020009.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #07" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/5gbkQbBj/1000020009.jpg', '\'TEXTURE\'')" loading="lazy">
                     </div>
-                    <!-- Column 2 (바다 사진 중앙 배치) -->
+                    <!-- Column 2 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/PZ5xpd63/1000019996.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #02" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/PZ5xpd63/1000019996.jpg', '\'TEXTURE\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/MyBzjbpf/1000020008.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #05" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/MyBzjbpf/1000020008.jpg', '\'TEXTURE\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/PZ5xpd63/1000019996.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #02" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/PZ5xpd63/1000019996.jpg', '\'TEXTURE\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/MyBzjbpf/1000020008.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #05" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/MyBzjbpf/1000020008.jpg', '\'TEXTURE\'')" loading="lazy">
                     </div>
-                    <!-- Column 3 (나무 및 동상 사진 우측 배치) -->
+                    <!-- Column 3 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/1GFPSgYy/1000020028.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #03" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/1GFPSgYy/1000020028.jpg', '\'TEXTURE\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/zVLX3RgX/1000019934.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #06" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/zVLX3RgX/1000019934.jpg', '\'TEXTURE\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/chYFxS1c/1000020002.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #08" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/chYFxS1c/1000020002.jpg', '\'TEXTURE\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/1GFPSgYy/1000020028.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #03" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/1GFPSgYy/1000020028.jpg', '\'TEXTURE\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/zVLX3RgX/1000019934.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #06" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/zVLX3RgX/1000019934.jpg', '\'TEXTURE\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/chYFxS1c/1000020002.jpg&w=800&output=webp&q=80" alt="'TEXTURE' — #08" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/chYFxS1c/1000020002.jpg', '\'TEXTURE\'')" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -238,35 +233,35 @@
                 
                 <!-- 3-Column Structural Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch max-w-7xl mx-auto">
-                    <!-- Column 1 (Index 1~7) -->
+                    <!-- Column 1 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/cXDCNkxz/1000019864.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #01" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/cXDCNkxz/1000019864.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/W9mr41m/1000019865.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #02" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/W9mr41m/1000019865.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/mrXwW9CW/1000019866.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #03" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/mrXwW9CW/1000019866.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/1YhR82Z6/1000019867.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #04" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/1YhR82Z6/1000019867.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/k6SnHvZm/1000019870.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #05" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/k6SnHvZm/1000019870.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/TMP27GYm/1000019871.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #06" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/TMP27GYm/1000019871.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/4w62HZMb/1000019886.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #07" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/4w62HZMb/1000019886.jpg', '\'MOROCCO\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/cXDCNkxz/1000019864.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #01" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/cXDCNkxz/1000019864.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/W9mr41m/1000019865.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #02" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/W9mr41m/1000019865.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/mrXwW9CW/1000019866.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #03" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/mrXwW9CW/1000019866.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/1YhR82Z6/1000019867.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #04" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/1YhR82Z6/1000019867.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/k6SnHvZm/1000019870.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #05" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/k6SnHvZm/1000019870.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/TMP27GYm/1000019871.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #06" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/TMP27GYm/1000019871.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/4w62HZMb/1000019886.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #07" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/4w62HZMb/1000019886.jpg', '\'MOROCCO\'')" loading="lazy">
                     </div>
-                    <!-- Column 2 (Index 8~14) -->
+                    <!-- Column 2 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/CKjT9zwX/1000019888.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #08" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/CKjT9zwX/1000019888.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/TxLKFPYb/1000019895.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #09" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/TxLKFPYb/1000019895.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/B2tDZFbq/1000019897.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #10" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/B2tDZFbq/1000019897.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/Gffh9Mgf/1000019936.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #11" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/Gffh9Mgf/1000019936.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/svPq1mYy/1000019945.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #12" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/svPq1mYy/1000019945.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/CKDfpBhN/1000019955.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #13" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/CKDfpBhN/1000019955.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/n8RqpTNj/1000019958.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #14" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/n8RqpTNj/1000019958.jpg', '\'MOROCCO\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/CKjT9zwX/1000019888.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #08" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/CKjT9zwX/1000019888.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/TxLKFPYb/1000019895.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #09" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/TxLKFPYb/1000019895.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/B2tDZFbq/1000019897.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #10" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/B2tDZFbq/1000019897.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/Gffh9Mgf/1000019936.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #11" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/Gffh9Mgf/1000019936.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/svPq1mYy/1000019945.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #12" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/svPq1mYy/1000019945.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/CKDfpBhN/1000019955.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #13" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/CKDfpBhN/1000019955.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/n8RqpTNj/1000019958.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #14" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/n8RqpTNj/1000019958.jpg', '\'MOROCCO\'')" loading="lazy">
                     </div>
-                    <!-- Column 3 (Index 15~21) -->
+                    <!-- Column 3 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/8ytQy4z/1000019966.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #15" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/8ytQy4z/1000019966.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/yB6sknmB/1000019970.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #16" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/yB6sknmB/1000019970.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/d4mpXHhH/1000019971.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #17" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/d4mpXHhH/1000019971.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/m5rgrwNM/1000019975.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #18" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/m5rgrwNM/1000019975.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/F4kGR2Q1/1000019978.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #19" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/F4kGR2Q1/1000019978.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/Nd94mNbh/1000019993.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #20" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/Nd94mNbh/1000019993.jpg', '\'MOROCCO\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/S4jYmSn4/1000019877.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #21" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/S4jYmSn4/1000019877.jpg', '\'MOROCCO\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/8ytQy4z/1000019966.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #15" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/8ytQy4z/1000019966.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/yB6sknmB/1000019970.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #16" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/yB6sknmB/1000019970.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/d4mpXHhH/1000019971.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #17" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/d4mpXHhH/1000019971.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/m5rgrwNM/1000019975.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #18" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/m5rgrwNM/1000019975.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/F4kGR2Q1/1000019978.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #19" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/F4kGR2Q1/1000019978.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/Nd94mNbh/1000019993.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #20" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/Nd94mNbh/1000019993.jpg', '\'MOROCCO\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/S4jYmSn4/1000019877.jpg&w=800&output=webp&q=80" alt="'MOROCCO' — #21" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/S4jYmSn4/1000019877.jpg', '\'MOROCCO\'')" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -282,27 +277,27 @@
                 
                 <!-- 3-Column Structural Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch max-w-7xl mx-auto">
-                    <!-- Column 1 (Index 1~5) -->
+                    <!-- Column 1 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/C5Fr4zD3/1000020011.jpg&w=800&output=webp&q=80" alt="'KOREA' — #01" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/C5Fr4zD3/1000020011.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/dscpj1Dp/1000019999.jpg&w=800&output=webp&q=80" alt="'KOREA' — #02" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/dscpj1Dp/1000019999.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/23TWqwKb/1000020014.jpg&w=800&output=webp&q=80" alt="'KOREA' — #03" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/23TWqwKb/1000020014.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/xKQ1GNVm/1000020021.jpg&w=800&output=webp&q=80" alt="'KOREA' — #04" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/xKQ1GNVm/1000020021.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/2f3HbMJ/1000020017.jpg&w=800&output=webp&q=80" alt="'KOREA' — #05" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/2f3HbMJ/1000020017.jpg', '\'KOREA\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/C5Fr4zD3/1000020011.jpg&w=800&output=webp&q=80" alt="'KOREA' — #01" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/C5Fr4zD3/1000020011.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/dscpj1Dp/1000019999.jpg&w=800&output=webp&q=80" alt="'KOREA' — #02" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/dscpj1Dp/1000019999.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/23TWqwKb/1000020014.jpg&w=800&output=webp&q=80" alt="'KOREA' — #03" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/23TWqwKb/1000020014.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/xKQ1GNVm/1000020021.jpg&w=800&output=webp&q=80" alt="'KOREA' — #04" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/xKQ1GNVm/1000020021.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/2f3HbMJ/1000020017.jpg&w=800&output=webp&q=80" alt="'KOREA' — #05" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/2f3HbMJ/1000020017.jpg', '\'KOREA\'')" loading="lazy">
                     </div>
-                    <!-- Column 2 (Index 6~9) -->
+                    <!-- Column 2 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/fdHZQm3H/1000020022.jpg&w=800&output=webp&q=80" alt="'KOREA' — #06" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/fdHZQm3H/1000020022.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/KpzHVMVT/1000020023.jpg&w=800&output=webp&q=80" alt="'KOREA' — #07" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/KpzHVMVT/1000020023.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/bMxRcxLX/1000020033.jpg&w=800&output=webp&q=80" alt="'KOREA' — #08" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/bMxRcxLX/1000020033.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/v4NQHsh6/1000020034.jpg&w=800&output=webp&q=80" alt="'KOREA' — #09" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/v4NQHsh6/1000020034.jpg', '\'KOREA\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/fdHZQm3H/1000020022.jpg&w=800&output=webp&q=80" alt="'KOREA' — #06" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/fdHZQm3H/1000020022.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/KpzHVMVT/1000020023.jpg&w=800&output=webp&q=80" alt="'KOREA' — #07" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/KpzHVMVT/1000020023.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/bMxRcxLX/1000020033.jpg&w=800&output=webp&q=80" alt="'KOREA' — #08" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/bMxRcxLX/1000020033.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/v4NQHsh6/1000020034.jpg&w=800&output=webp&q=80" alt="'KOREA' — #09" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/v4NQHsh6/1000020034.jpg', '\'KOREA\'')" loading="lazy">
                     </div>
-                    <!-- Column 3 (Index 10~13) -->
+                    <!-- Column 3 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/pvVHd1tL/1000020036.jpg&w=800&output=webp&q=80" alt="'KOREA' — #10" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/pvVHd1tL/1000020036.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/tp9HN3qm/1000020042.jpg&w=800&output=webp&q=80" alt="'KOREA' — #11" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/tp9HN3qm/1000020042.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/Z6WTCL17/1000020044.jpg&w=800&output=webp&q=80" alt="'KOREA' — #12" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/Z6WTCL17/1000020044.jpg', '\'KOREA\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/FbfLk2Qv/1000020054.jpg&w=800&output=webp&q=80" alt="'KOREA' — #13" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/FbfLk2Qv/1000020054.jpg', '\'KOREA\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/pvVHd1tL/1000020036.jpg&w=800&output=webp&q=80" alt="'KOREA' — #10" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/pvVHd1tL/1000020036.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/tp9HN3qm/1000020042.jpg&w=800&output=webp&q=80" alt="'KOREA' — #11" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/tp9HN3qm/1000020042.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/Z6WTCL17/1000020044.jpg&w=800&output=webp&q=80" alt="'KOREA' — #12" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/Z6WTCL17/1000020044.jpg', '\'KOREA\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/FbfLk2Qv/1000020054.jpg&w=800&output=webp&q=80" alt="'KOREA' — #13" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/FbfLk2Qv/1000020054.jpg', '\'KOREA\'')" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -320,21 +315,21 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch max-w-7xl mx-auto">
                     <!-- Column 1 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/GfQhxwth/1000019911.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #01" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/GfQhxwth/1000019911.jpg', '\'BEINGS\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/ds6j6kjP/1000019927.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #02" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/ds6j6kjP/1000019927.jpg', '\'BEINGS\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/V0vN8JHq/1000019937.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #03" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/V0vN8JHq/1000019937.jpg', '\'BEINGS\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/GfQhxwth/1000019911.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #01" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/GfQhxwth/1000019911.jpg', '\'BEINGS\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/ds6j6kjP/1000019927.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #02" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/ds6j6kjP/1000019927.jpg', '\'BEINGS\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/V0vN8JHq/1000019937.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #03" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/V0vN8JHq/1000019937.jpg', '\'BEINGS\'')" loading="lazy">
                     </div>
                     <!-- Column 2 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/6cChzv2k/1000019933.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #04" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/6cChzv2k/1000019933.jpg', '\'BEINGS\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/BVPHFZL0/1000019942.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #05" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/BVPHFZL0/1000019942.jpg', '\'BEINGS\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/spZKQ66T/1000019974.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #06" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/spZKQ66T/1000019974.jpg', '\'BEINGS\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/6cChzv2k/1000019933.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #04" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/6cChzv2k/1000019933.jpg', '\'BEINGS\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/BVPHFZL0/1000019942.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #05" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/BVPHFZL0/1000019942.jpg', '\'BEINGS\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/spZKQ66T/1000019974.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #06" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/spZKQ66T/1000019974.jpg', '\'BEINGS\'')" loading="lazy">
                     </div>
                     <!-- Column 3 -->
                     <div class="flex flex-col justify-between gap-6 md:gap-8">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/v67js2yK/1000019979.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #07" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/v67js2yK/1000019979.jpg', '\'BEINGS\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/YF4jkSj5/1000019984.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #08" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/YF4jkSj5/1000019984.jpg', '\'BEINGS\'')">
-                        <img src="https://wsrv.nl/?url=https://i.ibb.co/TqnwHrPw/1000020027.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #09" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/TqnwHrPw/1000020027.jpg', '\'BEINGS\'')">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/v67js2yK/1000019979.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #07" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/v67js2yK/1000019979.jpg', '\'BEINGS\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/YF4jkSj5/1000019984.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #08" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/YF4jkSj5/1000019984.jpg', '\'BEINGS\'')" loading="lazy">
+                        <img src="https://wsrv.nl/?url=https://i.ibb.co/TqnwHrPw/1000020027.jpg&w=800&output=webp&q=80" alt="'BEINGS' — #09" class="w-full h-auto object-contain block cursor-pointer" onclick="openLightbox('https://i.ibb.co/TqnwHrPw/1000020027.jpg', '\'BEINGS\'')" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -393,14 +388,14 @@
             { url: "https://i.ibb.co/rfbVxFJ2/94g0n-OObu14g-OC4v-KAd3-A.jpg", title: "스테이세이프" }
         ];
 
-        // 3-Column order logic for Texture (바뀐 순서에 맞게 라이트박스 뷰어 동기화)
+        // 3-Column order logic for Texture
         const textureImages = [
             { url: "https://i.ibb.co/21XdmYqk/1000019899.jpg", title: "'TEXTURE'" }, // Col 1
             { url: "https://i.ibb.co/m5tKZzWk/1000019941.jpg", title: "'TEXTURE'" }, // Col 1
             { url: "https://i.ibb.co/5gbkQbBj/1000020009.jpg", title: "'TEXTURE'" }, // Col 1
-            { url: "https://i.ibb.co/1GFPSgYy/1000020028.jpg", title: "'TEXTURE'" }, // Col 2 (Tree - relocated)
             { url: "https://i.ibb.co/PZ5xpd63/1000019996.jpg", title: "'TEXTURE'" }, // Col 2 (Sea)
             { url: "https://i.ibb.co/MyBzjbpf/1000020008.jpg", title: "'TEXTURE'" }, // Col 2
+            { url: "https://i.ibb.co/1GFPSgYy/1000020028.jpg", title: "'TEXTURE'" }, // Col 3 (Tree - relocated)
             { url: "https://i.ibb.co/zVLX3RgX/1000019934.jpg", title: "'TEXTURE'" }, // Col 3 (Archery - relocated)
             { url: "https://i.ibb.co/chYFxS1c/1000020002.jpg", title: "'TEXTURE'" }  // Col 3
         ];
